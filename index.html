@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Optional: Style for the search box */
+        #search-result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-info text-center py-3">
+        <h1>Welcome to Adesewa Dish Diaries </h1>
+<h4>  Cook, Eat, Smile—Adesewa’s Recipes for Happiness</h4>
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recipes"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline ml-auto" onsubmit="searchRecipe(event)">
+                    <input class="form-control mr-2" type="text" id="search-input" placeholder="Search recipes" required>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recipes" class="container my-5">
+            <h2 class="text-center">Recipes</h2>
+            <div class="row" id="recipe-list">
+                
+                <!-- Recipe 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="egusi.jpg" class="card-img-top" alt="Egusi Soup">
+                        <div class="card-body">
+                            <h5 class="card-title">Egusi Soup</h5>
+                            <p class="card-text">A delicious Nigerian soup made with ground melon seeds, fish, and locust beans.</p>
+                            <a href="egusisoup.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="Fish stew.jpg".jpg" class="card-img-top" alt="Fish Stew">
+                        <div class="card-body">
+                            <h5 class="card-title">Fish Stew</h5>
+                            <p class="card-text">A flavorful stew made with palm oil, fish, and spices.</p>
+                            <a href="fish stew.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="download (5).jpg" class="card-img-top" alt="Amala and Gbegiri">
+                        <div class="card-body">
+                            <h5 class="card-title">Amala and Gbegiri</h5>
+                            <p class="card-text">A delicious combination of smooth, stretchy Amala served with rich and flavorful Gbegiri (bean soup).</p>
+                            <a href="amalaandgbegiri.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="rb.jpg" class="card-img-top" alt="Rice and Beans with Fish Stew">
+                        <div class="card-body">
+                            <h5 class="card-title">Rice and Beans with Fish Stew</h5>
+                            <p class="card-text">A flavorful stew made with palm oil, fish, and spices.</p>
+                            <a href="Rice and Beans recipe.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 5: Noodles -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="download (7).jpg" class="card-img-top" alt="Noodles">
+                        <div class="card-body">
+                            <h5 class="card-title">Noodles And Omlette</h5>
+                            <p class="card-text">A quick and easy meal made with noodles and vegetables.</p>
+                            <a href="noodles.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 6: Spaghetti -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="download (6).jpg" class="card-img-top" alt="Spaghetti">
+                        <div class="card-body">
+                            <h5 class="card-title"> Jollof Spaghetti  And Boiled Egg</h5>
+                            <p class="card-text">Classic spaghetti served with your choice of sauce.</p>
+                            <a href="spagh.html" class="btn btn-info">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-result" class="row"></div>
+        </section>
+
+        <section id="about" class="container my-5">
+            <h2 class="text-center">About Me</h2>
+            <div id="about-content" class="text-center">
+                <p>Welcome to Adesewa’s Recipe Haven, a culinary journey where traditional flavors meet modern twists! Adesewa shares her love for cooking, bringing you a collection of delicious, easy-to-follow recipes inspired by Nigerian heritage and global cuisine. Whether you're a beginner or a seasoned cook, you’ll find something here to inspire your next meal. From hearty soups to flavorful stews, Adesewa’s kitchen is full of mouthwatering dishes that celebrate the joy of homemade food. Explore, cook, and enjoy a world of flavors with Adesewa!</p>
+            </div>
+        </section>
+
+        
+        </section>
+    </main>
+
+    
+    <section id="contact" class="container my-5">
+        <h2 class="text-center">Contact</h2>
+    
+        <p class="text-center">
+            
+            You can reach me at: 
+ <a href="mailto:your-email@example.com" class="text-primary">lawumimosun@gmail.com</a>
+    </p>        
+    <p class="text-center">
+            Follow me on social media: 
+            <a href="https://www.linkedin.com/in/Olawumi Mojisola" target="_blank" class="text-primary">LinkedIn</a>, 
+            <a href="https://instagram.com/abisola__olawumi" target="_blank" class="text-primary">Instagram</a>
+
+            <a href="https://tiktok.com/@adesewadevdiva5" target="_blank" class="text-primary">Tiktok</a>
+
+
+
+        </p>
+    </section>
+
+
+
+    <footer class="text-center py-3 bg-info">
+        <p>&copy; 2024 Adesewa`s Dish Diaries. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+   <script src="/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Sample local recipes
+        const localRecipes = [
+            {
+                title: "Egusi Soup",
+                description: "A delicious Nigerian soup made with ground melon seeds, fish, and locust beans.",
+                image: "egusi.jpg",
+                link: "egusisoup.html"
+            },
+            {
+                title: "Fish Stew",
+                description: "A flavorful stew made with palm oil, fish, and spices.",
+                image: "fish_stew.jpg",
+                link: "fish_stew.html"
+            },
+            {
+                title: "Amala and Gbegiri",
+                description: "A delicious combination of smooth, stretchy Amala served with rich and flavorful Gbegiri (bean soup).",
+                image: "amala_gbegiri.jpg",
+                link: "amalaandgbegiri.html"
+            },
+            {
+                title: "Rice and Beans with Fish Stew",
+                description: "A flavorful stew made with palm oil, fish, and spices.",
+                image: "rice_and_beans.jpg",
+                link: "riceandbeans.html"
+            },
+            {
+                title: "Noodles",
+                description: "A quick and easy meal made with noodles and vegetables.",
+                image: "noodles.jpg",
+                link: "noodles.html"
+            },
+            {
+                title: "Spaghetti",
+                description: "Classic spaghetti served with your choice of sauce.",
+                image: "spaghetti.jpg",
+                link: "spaghetti.html"
+            },
+        ];
+
+        function searchRecipe(event) {
+            event.preventDefault(); // Prevent form submission
